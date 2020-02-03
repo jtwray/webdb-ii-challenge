@@ -1,3 +1,4 @@
+const db = require('../../data/dbConfig')
 function find() {
     return db('cars').select('id', 'make', 'model');
   }
@@ -17,4 +18,4 @@ function find() {
       .where({ id })
       .first();
   }
-  
+   module.exports={ find,findBy,findById,add}
